@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(245, 247, 255);
+  background: linear-gradient(180deg, rgb(245, 247, 255) 25%, rgb(255, 255, 255) 25%);
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  color: hsl(228deg, 12%, 44%);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.positive-text {
+  color: hsl(163deg, 72%, 41%);
+}
+
+.negative-text {
+  color: hsl(356deg, 69%, 56%);
+}
+
+.dashboard__title h1 {
+  color: #000;
+}
+.dashboard__title-mode .switch {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.5rem;
+  margin: 0 1.5em;
+}
+.dashboard__title-mode .switch-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(230deg, 22%, 74%);
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: background-image 0.3s;
+}
+.dashboard__title-mode .switch-toggle::before {
+  position: absolute;
+  left: 0.3rem;
+  top: 0.3rem;
+  transform: translateX(2.5rem);
+  height: 1.9rem;
+  width: 1.9rem;
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.dashboard__title-mode .switch .checkbox {
+  opacity: 0;
+}
+.dashboard__title-mode .switch .checkbox:checked + .switch-toggle {
+  background-image: linear-gradient(to right, hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
+}
+.dashboard__title-mode .switch .checkbox:checked + .switch-toggle::before {
+  transform: translateX(0);
+}
+.dashboard__card {
+  background-color: hsl(227deg, 47%, 96%);
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.dashboard__card:hover {
+  background-color: hsl(232deg, 33%, 91%);
+}
+.dashboard__card-strip {
+  height: 4px;
+  width: 100%;
+  background-color: hsl(208deg, 92%, 53%);
+}
+.dashboard__card-strip--twitter {
+  background-color: hsl(203deg, 89%, 53%);
+}
+.dashboard__card-strip--instagram {
+  background-image: linear-gradient(to right, hsl(37deg, 97%, 70%), hsl(329deg, 70%, 58%));
+}
+.dashboard__card-strip--yt {
+  background-color: hsl(348deg, 97%, 39%);
+}
+.dashboard__card-score {
+  color: #000;
+}
+.dashboard__card-followers {
+  letter-spacing: 5px;
+}
+
+.dark-mode {
+  background: rgb(30, 32, 42);
+  background: linear-gradient(180deg, rgb(30, 32, 42) 25%, rgb(31, 33, 46) 25%);
+}
+.dark-mode .dashboard__title h1 {
+  color: #fff;
+}
+.dark-mode .dashboard__card {
+  background-color: hsl(228deg, 28%, 20%);
+}
+.dark-mode .dashboard__card:hover {
+  background-color: hsl(228deg, 26%, 27%);
+}
+.dark-mode .dashboard__card-score {
+  color: #fff;
+}
+.dark-mode .dashboard__overview {
+  color: #fff;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+  transition: color 0.3s;
+}
+.attribution a:hover {
+  color: hsl(203deg, 89%, 53%);
+}/*# sourceMappingURL=main.css.map */

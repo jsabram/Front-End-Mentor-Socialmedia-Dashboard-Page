@@ -1,0 +1,178 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: rgb(245, 247, 255);
+	background: linear-gradient(
+		180deg,
+		rgba(245, 247, 255, 1) 25%,
+		rgba(255, 255, 255, 1) 25%
+	);
+	font-family: 'Inter', sans-serif;
+	font-size: 1.4rem;
+	color: hsl(228, 12%, 44%);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.positive-text {
+	color: hsl(163, 72%, 41%);
+}
+
+.negative-text {
+	color: hsl(356, 69%, 56%);
+}
+
+.dashboard {
+	&__title {
+		h1 {
+			color: #000;
+		}
+		&-mode {
+			.switch {
+				position: relative;
+				display: inline-block;
+				width: 5rem;
+				height: 2.5rem;
+				margin: 0 1.5em;
+
+				&-toggle {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background-color: hsl(230, 22%, 74%);
+					border-radius: 1.5rem;
+					cursor: pointer;
+					transition: background-image 0.3s;
+
+					&::before {
+						position: absolute;
+						left: 0.3rem;
+						top: 0.3rem;
+						transform: translateX(2.5rem);
+						height: 1.9rem;
+						width: 1.9rem;
+						background-color: #fff;
+						border-radius: 50%;
+						content: '';
+						cursor: pointer;
+						transition: transform 0.3s;
+					}
+				}
+
+				.checkbox {
+					opacity: 0;
+				}
+
+				.checkbox:checked + .switch-toggle {
+					background-image: linear-gradient(
+						to right,
+						hsl(210, 78%, 56%),
+						hsl(146, 68%, 55%)
+					);
+				}
+
+				.checkbox:checked + .switch-toggle::before {
+					transform: translateX(0);
+				}
+			}
+		}
+	}
+	&__card {
+		background-color: hsl(227, 47%, 96%);
+		border-radius: 1rem;
+		overflow: hidden;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: hsl(232, 33%, 91%);
+		}
+
+		&-strip {
+			height: 4px;
+			width: 100%;
+			background-color: hsl(208, 92%, 53%);
+
+			&--twitter {
+				background-color: hsl(203, 89%, 53%);
+			}
+
+			&--instagram {
+				background-image: linear-gradient(
+					to right,
+					hsl(37, 97%, 70%),
+					hsl(329, 70%, 58%)
+				);
+			}
+
+			&--yt {
+				background-color: hsl(348, 97%, 39%);
+			}
+		}
+
+		&-score {
+			color: #000;
+		}
+
+		&-followers {
+			letter-spacing: 5px;
+		}
+	}
+}
+
+.dark-mode {
+	background: rgb(30, 32, 42);
+	background: linear-gradient(
+		180deg,
+		rgba(30, 32, 42, 1) 25%,
+		rgba(31, 33, 46, 1) 25%
+	);
+
+	.dashboard {
+		&__title {
+			h1 {
+				color: #fff;
+			}
+		}
+
+		&__card {
+			background-color: hsl(228, 28%, 20%);
+
+			&:hover {
+				background-color: hsl(228, 26%, 27%);
+			}
+
+			&-score {
+				color: #fff;
+			}
+		}
+
+		&__overview {
+			color: #fff;
+		}
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+	transition: color 0.3s;
+
+	&:hover {
+		color: hsl(203, 89%, 53%);
+	}
+}
