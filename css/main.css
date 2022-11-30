@@ -27,6 +27,9 @@ body {
   color: hsl(356deg, 69%, 56%);
 }
 
+.dashboard {
+  max-width: 1400px;
+}
 .dashboard__title h1 {
   color: #000;
 }
