@@ -32,6 +32,8 @@ body {
 }
 
 .dashboard {
+	max-width: 1400px;
+	
 	&__title {
 		h1 {
 			color: #000;
